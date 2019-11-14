@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alertify.min.css">
+    <link rel="stylesheet" href="css/themes/default.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
 <body>
     <div class="contenedor">
-        <div class="formulario">
+        <div class="formulario" id="formulario">
             <div class="logo-header">
                 <img src="img/logo3.jpg">
             </div><!--Logo-header-->
@@ -18,7 +20,7 @@
             <form action="#">
                 <input type="email"  name="email" id="correo" placeholder="Correo Electrónico">
                 <input type="password" name="password" id="pass" placeholder="Ingrese su Contraseña">
-                <input type="button" class="alt-form" value="Iniciar Sesión" onclick="Login()">
+                <input type="button" class="alt-form" value="Iniciar Sesión" onclick="Login()" id="registro">
                 <p class="text-footer">¿No te encuentras registrado? 
                     <a href="template/registro.html" target="_blank">Ingresa aquí</a>
                 </p>
@@ -27,6 +29,7 @@
         <!--Imagen con texto-->
     </div><!--Contenedor-->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/alertify.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
