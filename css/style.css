@@ -1,0 +1,134 @@
+html{
+	font-size: 62.5%; /* Reset para REM */
+	/* 62.5 = 10px de 16px */
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+/*Estilos generales */
+*{
+	margin:0;
+    padding:0;
+    text-decoration: none;
+}
+
+img{
+	max-width: 100%;/*Para que todas las imagenes sean responsive */
+}
+
+.contenedor{
+    max-width:120rem;
+    width: 100%;
+	margin: 0 auto 0 auto;/* Lo centro*/
+	max-height: 1000px;
+}
+
+body{
+    font-size:1.8rem;
+	line-height: 2;
+	background: linear-gradient(90deg,#00d7a2,#043670);
+	padding: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.logo-header{
+	width: 130px;
+	display: block;
+	margin: 0 auto;
+}
+
+.titulo{
+	text-align:center;
+	font-weight: 700;
+	margin-top:15px;
+	color:#7a7a7a;
+}
+
+/* Estilos al formulario */
+.formulario{
+	background-color:#f7f7f7;
+	width: 40%; /*ancho */
+	margin: 20px auto; /*para centrarlo */
+	padding: 20px;
+	margin-top: 90px;/*para bajarlo un poco */
+	border-radius: 11px;
+}
+
+.formulario input,
+.formulario textarea{
+    display: block;
+	margin: 0 auto;
+	height: 30px;
+	background: rgba(0,0,0,0);
+	border:0px;
+	outline: 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.18);
+	color: #043670;
+	font-size: 15px;
+}
+
+.formulario h3,
+.formulario p{
+    text-align: center;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario input[type="password"],
+.formulario textarea{
+    width: 100%;
+	padding: 1rem;
+	margin-bottom:20px ;/*margen inferior, para separarlos uno del otro */
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="tel"]:focus,
+.formulario input[type="date"]:focus,
+.formulario input[type="password"]:focus,
+.formulario textarea:focus{
+    border: 0.5px solid #043670;
+}
+
+.formulario input[type="button"]{
+	width:100%;
+	height: 50px;
+	margin-top: 40px;
+	color: white;
+	border:0px;
+	background: linear-gradient(90deg,#00d7a2,#043670);
+	font-weight: 700;
+	cursor: pointer;
+	font-size:18px;
+}
+
+.formulario input[type="button"]:hover{
+	background: linear-gradient(90deg,#043670,#00d7a2);
+}
+
+.formulario textarea{
+	min-height: 120px;
+	max-height: 200px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+
+.text-footer{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	color:#7a7a7a;
+	font-weight: 400;
+}
+
+.text-footer a{
+	color: #043670;
+	font-weight: 700;
+}
+/* listo el formulario , aunque no es responsive */
