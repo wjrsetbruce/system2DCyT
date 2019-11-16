@@ -46,7 +46,7 @@
             </li>
             <!--Consultar servicios-->
             <li class="nav-item">
-                <a href="consultar_servicio.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                <a href="servicio_cliente.html" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">storage</i>
                         Consultar Sevicios
                 </a>
@@ -75,39 +75,49 @@
         </ul>
     </aside><!-- Aside-->
 
-    <!-- Contenido principal-->
-    <main class="pt-1">   
-        <div class="container">
-            <h2 class="text-center mb-4">Modificaciòn de datos</h2>
-            <div class="row">
-                <div class="col">
-                    <form class="formulario" novalidate>
-                        <div class="form-group">
-                            <label for="tel">Telefono</label>
-                            <input type="tel" class="form-control" id="telefono"  placeholder="Telefono">
-                        </div>
+    <main class="pt-1">
+        <h3 class="text-center mt-4">Consultar Servicios</h3>
 
-                        <div class="form-group">
-                            <label for="direccion">Direcciòn fiscal</label>
-                            <textarea class="form-control" id="direccion" rows="3" placeholder="direccion"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email"  placeholder="Correo electrónico" >
-                        </div>
+        <table class="table">
+            <caption>Listado Actualizado...</caption>
+            <thead>
+                <tr>    
+                    <th scope="col">Numero</th>
+                    <th scope="col">Locales</th>
+                    <th scope="col">Oficina</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Altagracia</td>
+                        <td>23 de Enero</td>
+                        <td>
+                            <a href="#" class="btn btn-success" onclick="Locales()">Ver màs Informaciòn</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                            <td>Agua Salud</td>
+                            <td>Local Sucre</td>
+                            <td>
+                                <a href="#" class="btn btn-success" onclick="Locales()">Ver màs Informaciòn</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Catia</td>
+                        <td>Local la Pastora</td>
+                        <td>
+                            <a href="#" class="btn btn-success" onclick="Locales()">Ver màs Informaciòn</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+    </div><!--cierre div-->
+    </main><!--Main-->
 
-                        <div class="form-group">
-                            <label for="contraseña">Contraseña</label>
-                            <input type="password" class="form-control" id="password"  placeholder="Contraseña">
-                        </div>
-                   
-                        <input type="button" class="btn btn-success" onclick="modificarDatos()" value="Modificar"></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>

@@ -24,6 +24,11 @@ function Login(){
         document.getElementById('correo').value = "";
         document.getElementById('pass').value = "";
     }
+
+    if(username === 'william@gmail.com' && password != "1"){
+        alertify.error("Contraseña Incorrecta");
+        document.getElementById('pass').value = "";
+    }
 }
 
 function Registro(){
@@ -45,6 +50,11 @@ function Registro(){
     }
     if(validarCedula.test(cedula)){
         alertify.error('La cedula no puede contener letras');
+        document.getElementById('cedula').value = "";
+        flag = false;
+    }
+    if(cedula === '18736475'){
+        alertify.error('Error, la cedula ya se encuentra registrada');
         document.getElementById('cedula').value = "";
         flag = false;
     }
@@ -80,11 +90,19 @@ function modificarDatos(){
     var password = document.getElementById('password').value;
     flag = true;
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    validarTlf = /[A-Z]|\s|[a-z]/;
     if(!validarEmail.test(correo)){
         alertify.error("Error, correo elèctronico no valido");
         document.getElementById('email').value = "";
         flag = false;
     }
+
+    if(validarTlf.test(tlf)){
+        alertify.error('El telefono no puede contener letras');
+        document.getElementById('telefono').value = "";
+        flag = false;
+    }
+
     if(tlf === "" || tlf === "null" || direccion === "" || direccion === "null" ||
          correo === "null" || correo ===""|| password === "null" || password === ""){
             // Muestro el error
@@ -97,8 +115,11 @@ function modificarDatos(){
             alertify.success('Ok'); window.location="cliente.html";})
 
     }
+}
 
+function Locales(){
+    alertify.alert('Gestión Inmobiliaria', 'Informaciòn del Loca y la Oficina', function(){
+        alertify.success('Ok'); window.location="consultar_servicio.html";})
 
-    
 }
 

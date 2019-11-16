@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
 .bg-primary{
     background:linear-gradient(90deg,#043670, #00d7a2)!important;
 }
@@ -23,7 +24,7 @@ a:hover{
 aside{
     width: 260px;
     height: 100%;
-    position:fixed;
+    position: absolute;
     margin-top:56px;
     top: 0;
     bottom: 0;

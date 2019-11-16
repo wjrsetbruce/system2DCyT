@@ -46,7 +46,7 @@
             </li>
             <!--Consultar servicios-->
             <li class="nav-item">
-                <a href="consultar_servicio.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                <a href="servicio_cliente.html" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">storage</i>
                         Consultar Sevicios
                 </a>
@@ -75,39 +75,39 @@
         </ul>
     </aside><!-- Aside-->
 
-    <!-- Contenido principal-->
-    <main class="pt-1">   
-        <div class="container">
-            <h2 class="text-center mb-4">Modificaciòn de datos</h2>
-            <div class="row">
-                <div class="col">
-                    <form class="formulario" novalidate>
-                        <div class="form-group">
-                            <label for="tel">Telefono</label>
-                            <input type="tel" class="form-control" id="telefono"  placeholder="Telefono">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="direccion">Direcciòn fiscal</label>
-                            <textarea class="form-control" id="direccion" rows="3" placeholder="direccion"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email"  placeholder="Correo electrónico" >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contraseña">Contraseña</label>
-                            <input type="password" class="form-control" id="password"  placeholder="Contraseña">
-                        </div>
-                   
-                        <input type="button" class="btn btn-success" onclick="modificarDatos()" value="Modificar"></button>
-                    </form>
+    <main class="pt-1">
+            <div class="container">
+                <h2 class="text-center mb-4">Registrar Cita</h2>
+                <div class="row">
+                    <div class="col">
+                        <form class="formulario" novalidate>
+                            <div class="form-group">
+                                <label for="tel">Telefono</label>
+                                <input type="tel" class="form-control" id="telefono"  placeholder="Telefono">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="direccion">Direcciòn fiscal</label>
+                               <textarea class="form-control" id="direccion" rows="3" placeholder="direccion"></textarea>
+                            </div>
+                                
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email"  placeholder="Correo electrónico" >
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="contraseña">Contraseña</label>
+                                <input type="password" class="form-control" id="password"  placeholder="Contraseña">
+                            </div>
+                           
+                             <input type="button" class="btn btn-success" onclick="" value="Registrar Cita"></button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
+
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>
