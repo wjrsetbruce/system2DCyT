@@ -72,3 +72,33 @@ function Registro(){
     }
 
 }
+
+function modificarDatos(){
+    var tlf = document.getElementById('telefono').value;
+    var direccion = document.getElementById('direccion').value;
+    var correo = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    flag = true;
+    validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if(!validarEmail.test(correo)){
+        alertify.error("Error, correo elèctronico no valido");
+        document.getElementById('email').value = "";
+        flag = false;
+    }
+    if(tlf === "" || tlf === "null" || direccion === "" || direccion === "null" ||
+         correo === "null" || correo ===""|| password === "null" || password === ""){
+            // Muestro el error
+         alertify.error("Error, algunos campos se encuentran vacio");
+         flag = false;
+    }
+
+    if(flag){
+        alertify.alert('Gestión Inmobiliaria', 'Modificaciòn Exitosa!', function(){
+            alertify.success('Ok'); window.location="cliente.html";})
+
+    }
+
+
+    
+}
+

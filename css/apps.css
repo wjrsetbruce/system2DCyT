@@ -1,0 +1,38 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.bg-primary{
+    background:linear-gradient(90deg,#043670, #00d7a2)!important;
+}
+
+.btn-success{
+    background-color:#043670!important;
+}
+
+
+.blanco{
+    color: #fff!important;
+}
+
+a:hover{
+    font-weight: 700;
+    color:#00d7a2!important;
+}
+
+/** Estilos al aside **/
+aside{
+    width: 260px;
+    height: 100%;
+    position:fixed;
+    margin-top:56px;
+    top: 0;
+    bottom: 0;
+    z-index: 1029;
+}
+
+main {
+    position: relative;
+    left: 0;
+    margin-left: 260px;
+    min-height: 100%;
+}
