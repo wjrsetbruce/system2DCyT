@@ -12,10 +12,10 @@ function Login(){
         window.location="template/cliente.html"; 
     }
     if(username === "" || username === "null" || password === "" || password === "null"){
-        alertify.error("Error, los campos se encuentran vacios");
+        alertify.error("Error, los campos se encuentran vacíos");
     }
     if(!validarEmail.test(username)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no valido");
         document.getElementById('correo').value = "";
     }
 
@@ -44,22 +44,22 @@ function Registro(){
     validarCedula = /[A-Z]|\s|[a-z]/;
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     if(validarNombre.test(nombre)){
-        alertify.error('El nombre no puede contener numeros');
+        alertify.error('El nombre no puede contener números');
         document.getElementById('nombre').value = "";
         flag = false;
     }
     if(validarCedula.test(cedula)){
-        alertify.error('La cedula no puede contener letras');
+        alertify.error('La cédula no puede contener letras');
         document.getElementById('cedula').value = "";
         flag = false;
     }
     if(cedula === '18736475'){
-        alertify.error('Error, la cedula ya se encuentra registrada');
+        alertify.error('Error, la cédula ya se encuentra registrada');
         document.getElementById('cedula').value = "";
         flag = false;
     }
     if(validarCedula.test(tlf)){
-        alertify.error('El telefono no puede contener letras');
+        alertify.error('El teléfono no puede contener letras');
         document.getElementById('tlf').value = "";
         flag = false;
     }
@@ -98,7 +98,7 @@ function modificarDatos(){
     }
 
     if(validarTlf.test(tlf)){
-        alertify.error('El telefono no puede contener letras');
+        alertify.error('El teléfono no puede contener letras');
         document.getElementById('telefono').value = "";
         flag = false;
     }
