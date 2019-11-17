@@ -16,17 +16,15 @@ function Login(){
     }
     if(!validarEmail.test(username)){
         alertify.error("Error, correo eléctronico no valido");
+
+        alertify.error("Error, correo eléctronico no válido");
+
         document.getElementById('correo').value = "";
     }
 
     if(username != "admin@cryptolab.net" && username != "william@gmail.com" && validarEmail.test(username)){
         alertify.error("Usuario no registrado");
         document.getElementById('correo').value = "";
-        document.getElementById('pass').value = "";
-    }
-
-    if(username === 'william@gmail.com' && password != "1"){
-        alertify.error("Contraseña Incorrecta");
         document.getElementById('pass').value = "";
     }
 }
@@ -61,10 +59,11 @@ function Registro(){
     if(validarCedula.test(tlf)){
         alertify.error('El teléfono no puede contener letras');
         document.getElementById('tlf').value = "";
+        document.getElementById('telefono').value = "";
         flag = false;
     }
     if(!validarEmail.test(correo)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no válido");
         document.getElementById('correo').value = "";
         flag = false;
     }
@@ -72,7 +71,7 @@ function Registro(){
         || tlf === "null" || tlf === "" || direccion ==="" || direccion ==="null" ||
          correo === "null" || correo ===""|| pass === "null" || pass === ""){
             // Muestro el error
-        alertify.error("Error, algunos campos se encuentran vacio");
+        alertify.error("Error, algunos campos se encuentran vacíos");
         flag = false;
     }
 
@@ -90,9 +89,8 @@ function modificarDatos(){
     var password = document.getElementById('password').value;
     flag = true;
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    validarTlf = /[A-Z]|\s|[a-z]/;
     if(!validarEmail.test(correo)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no válido");
         document.getElementById('email').value = "";
         flag = false;
     }
@@ -106,20 +104,17 @@ function modificarDatos(){
     if(tlf === "" || tlf === "null" || direccion === "" || direccion === "null" ||
          correo === "null" || correo ===""|| password === "null" || password === ""){
             // Muestro el error
-         alertify.error("Error, algunos campos se encuentran vacio");
+         alertify.error("Error, algunos campos se encuentran vacíos");
          flag = false;
     }
 
     if(flag){
-        alertify.alert('Gestión Inmobiliaria', 'Modificaciòn Exitosa!', function(){
+        alertify.alert('Gestión Inmobiliaria', 'Modificación Exitosa!', function(){
             alertify.success('Ok'); window.location="cliente.html";})
 
     }
-}
 
-function Locales(){
-    alertify.alert('Gestión Inmobiliaria', 'Informaciòn del Loca y la Oficina', function(){
-        alertify.success('Ok'); window.location="consultar_servicio.html";})
 
+    
 }
 
