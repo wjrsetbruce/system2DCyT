@@ -43,8 +43,14 @@ function Registro(){
     validarNombre = /[0-9]/;
     validarCedula = /[A-Z]|\s|[a-z]/;
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
     if(validarNombre.test(nombre)){
         alertify.error('El nombre no puede contener numeros');
+        document.getElementById('nombre').value = "";
+        flag = false;
+    }
+    if(validarCaracteres.test(nombre)){
+        alertify.error('El nombre no puede contener caracteres especiales');
         document.getElementById('nombre').value = "";
         flag = false;
     }
@@ -53,13 +59,23 @@ function Registro(){
         document.getElementById('cedula').value = "";
         flag = false;
     }
+    if(validarCaracteres.test(direccion)){
+        alertify.error('Dirección no puede contener caracteres especiales');
+        document.getElementById('direccion').value = "";
+        flag = false;
+    }
+    if(validarCaracteres.test(cedula)){
+        alertify.error('La cedula no puede contener caracteres especiales');
+        document.getElementById('cedula').value = "";
+        flag = false;
+    }
     if(cedula === '18736475'){
         alertify.error('Error, la cedula ya se encuentra registrada');
         document.getElementById('cedula').value = "";
         flag = false;
     }
-    if(validarCedula.test(tlf)){
-        alertify.error('El telefono no puede contener letras');
+    if(validarCedula.test(tlf) || validarCaracteres.test(tlf)){
+        alertify.error('El telefono no puede contener letras, ni caracteres especiales');
         document.getElementById('tlf').value = "";
         flag = false;
     }
@@ -91,14 +107,21 @@ function modificarDatos(){
     flag = true;
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     validarTlf = /[A-Z]|\s|[a-z]/;
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
     if(!validarEmail.test(correo)){
         alertify.error("Error, correo elèctronico no valido");
         document.getElementById('email').value = "";
         flag = false;
     }
 
-    if(validarTlf.test(tlf)){
-        alertify.error('El telefono no puede contener letras');
+    if(validarCaracteres.test(direccion)){
+        alertify.error('La Dirección no puede contener caracteres especiales');
+        document.getElementById('direccion').value = "";
+        flag = false;
+    }
+
+    if(validarTlf.test(tlf) || validarCaracteres.test(tlf)){
+        alertify.error('El telefono no puede contener letras, ni caracteres especiales');
         document.getElementById('telefono').value = "";
         flag = false;
     }
