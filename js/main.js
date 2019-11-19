@@ -146,3 +146,28 @@ function Locales(){
 
 }
 
+function RegistroCita(){
+    alertify.alert('Gestión Inmobiliaria', 'El registro ha sido exitoso, tiene su cita a las 3PM', function(){
+        alertify.success('Ok'); window.location="registrar_cita.html";})
+}
+
+function ConsultarCita(){
+    alertify.alert('Gestión Inmobiliaria', 'La hora de su cita es a las 3pm', function(){
+        alertify.success('Ok'); window.location="consultar_cita.html";})
+}
+
+function RegistrarOpinion(){
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
+    var opinion = document.getElementById("opinion").value;
+    var flag = true;
+    if(validarCaracteres.test(opinion) || opinion === "null" || opinion ===""){
+        alertify.error('No puede dejar vacio el campo de opinión, ni colocar caracteres especiales');
+        document.getElementById('opinion').value = "";
+        flag = false;
+    }
+    if(flag){
+        alertify.alert('Gestión Inmobiliaria', 'Muchas gracias por su opinion', function(){
+            alertify.success('Ok'); window.location="registrar_cita.html";})
+    }
+
+}

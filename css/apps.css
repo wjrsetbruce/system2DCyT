@@ -37,3 +37,13 @@ main {
     margin-left: 260px;
     min-height: 100%;
 }
+
+.form-group input[type="date"]{
+    display: block;
+    border:1px solid#e1e1e1;
+    border-radius: 1em;
+    outline: 0px;
+    width: 20%;
+	padding: 1rem;
+	margin-bottom:20px ;/*margen inferior, para separarlos uno del otro */
+}

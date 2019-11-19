@@ -76,40 +76,14 @@
     </aside><!-- Aside-->
 
     <main class="pt-1">
-            <div class="container">
-                <h2 class="text-center mb-4">Registrar Cita</h2>
-                <div class="row">
-                    <div class="col">
-                        <form class="formulario" novalidate>
-                            <div class="form-group">
-                                <label for="inputState">Locales</label>
-                                <select id="inputState" class="form-control">
-                                  <option selected>Seleccionar Local</option>
-                                  <option>Altagracia</option>
-                                  <option>Agua Salud</option>
-                                  <option>Catia</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="inputState">Oficinas</label>
-                                <select id="inputState" class="form-control">
-                                  <option selected>Seleccionar Oficina</option>
-                                  <option>Altagracia</option>
-                                  <option>Agua Salud</option>
-                                  <option>Catia</option>
-                                </select>
-                              </div>
-                            <div class="form-group">
-                                <label>Seleccione una fecha para su cita</label>
-                                <input type="date" name="fecha" placeholder="Fecha del contrato" id="fecha">
-                            </div>
-                             <input type="button" class="btn btn-success" onclick="RegistroCita()" value="Registrar Cita"></button>
-                        </form>
-                    </div>
-                </div>
+        <h3 class="text-center mt-4">Su opinión nos sería de gran utilidad</h3>
+        <div class="container">
+            <div class="form-group">
+                <textarea class="form-control" id="opinion" rows="4" placeholder="Escriba su Opinion"></textarea>
             </div>
+            <input type="button" class="btn btn-success" onclick="RegistrarOpinion()" value="Registrar Opinion"></button>
+        </div>
     </main>
-
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>

@@ -60,14 +60,14 @@
             </li>
             <!--Consultar cita-->
             <li class="nav-item">
-                <a href="consultar_cita.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                <a href="#" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">pageview</i>
                         Consultar cita
                 </a>
             </li>
             <!--Registrar Opinion-->
             <li class="nav-item">
-                <a href="#" class="nav-link text-ligth d-flex align-items-center blanco">
+                <a href="registrar_opinion.html" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">mood</i>
                         Registrar opinion
                 </a>
@@ -76,39 +76,40 @@
     </aside><!-- Aside-->
 
     <main class="pt-1">
-            <div class="container">
-                <h2 class="text-center mb-4">Registrar Cita</h2>
-                <div class="row">
-                    <div class="col">
-                        <form class="formulario" novalidate>
-                            <div class="form-group">
-                                <label for="inputState">Locales</label>
-                                <select id="inputState" class="form-control">
-                                  <option selected>Seleccionar Local</option>
-                                  <option>Altagracia</option>
-                                  <option>Agua Salud</option>
-                                  <option>Catia</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="inputState">Oficinas</label>
-                                <select id="inputState" class="form-control">
-                                  <option selected>Seleccionar Oficina</option>
-                                  <option>Altagracia</option>
-                                  <option>Agua Salud</option>
-                                  <option>Catia</option>
-                                </select>
-                              </div>
-                            <div class="form-group">
-                                <label>Seleccione una fecha para su cita</label>
-                                <input type="date" name="fecha" placeholder="Fecha del contrato" id="fecha">
-                            </div>
-                             <input type="button" class="btn btn-success" onclick="RegistroCita()" value="Registrar Cita"></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-    </main>
+            <h3 class="text-center mt-4">Consultar Cita</h3>
+    
+            <table class="table">
+                <caption class="pt-1">Listado de citas actualizado...</caption>
+                <thead>
+                    <tr>    
+                        <th scope="col">Numero</th>
+                        <th scope="col">Local</th>
+                        <th scope="col">Oficina</th>
+                        <th scope="col">Detalles</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Altagracia</td>
+                            <td>23 de Enero</td>
+                            <td>
+                                <a href="#" class="btn btn-success" onclick="ConsultarCita()">Ver màs Informaciòn</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                                <td>Agua Salud</td>
+                                <td>Local Sucre</td>
+                                <td>
+                                    <a href="#" class="btn btn-success" onclick="ConsultarCita()">Ver màs Informaciòn</a>
+                                </td>
+                        </tr>
+                    </tbody>
+                  </table>
+        </div><!--cierre div-->
+        </main><!--Main-->
+
 
 
     <script src="../js/jquery-3.3.1.min.js"></script>
