@@ -9,8 +9,9 @@ body{
 .btn-success{
     background-color:#043670!important;
 }
-
-
+.bg-success{
+    background-color:#043670!important;
+}
 .blanco{
     color: #fff!important;
 }

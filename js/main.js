@@ -64,11 +64,6 @@ function Registro(){
         document.getElementById('direccion').value = "";
         flag = false;
     }
-    if(validarCaracteres.test(cedula)){
-        alertify.error('La cédula no puede contener caracteres especiales');
-        document.getElementById('cedula').value = "";
-        flag = false;
-    }
     if(cedula === '18736475'){
         alertify.error('Error, Cliente ya registrado');
         document.getElementById('cedula').value = "";
@@ -171,3 +166,56 @@ function RegistrarOpinion(){
     }
 
 }
+
+function Borrar(){
+    alertify.confirm("¿Esta seguro que desea Borrar al inquilino.?",function(){
+        alertify.success('Inquilino eliminado exitosamente');},function(){
+            alertify.error('El inquilino no se ha eliminado');
+  });
+}
+
+function Editar(){
+    var telefono = document.getElementById("telefono").value;
+    var direccion = document.getElementById("direccion").value;
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
+    validarNumero = /[A-Z]|\s|[a-z]/;
+    var flag = true;
+    if(validarCaracteres.test(direccion) || direccion === "null" || direccion ===""
+        || validarCaracteres.test(telefono) || telefono ==="null" || telefono ==="" ||
+         validarNumero.test(telefono)){
+            alertify.error('No puede dejar vacío el campo de opinión, ni colocar caracteres especiales');
+            document.getElementById('telefono').value = "";
+            document.getElementById('direccion').value="";
+            flag = false;
+    }
+    if(flag){
+        alertify.success('Edición exitosa');
+        document.getElementById('telefono').value = "";
+        document.getElementById('direccion').value="";
+    }
+}
+
+function Ver(){
+    alertify.alert('Grupo Gestión Inmobiliaria', 'Más información del inquilino', function(){
+        alertify.success('Ok'); window.location="admin.html";})
+}
+
+function BorrarCita(){
+    alertify.confirm("¿Esta seguro que desea Borrar la cita.?",function(){
+        alertify.success('Cita eliminada exitosamente');},function(){
+            alertify.error('La cita no se ha eliminado');
+  });
+}
+
+function AprobarCita(){
+    alertify.confirm("¿Esta seguro que desea aprobar la cita.?",function(){
+        alertify.success('Cita aprobada exitosamente');},function(){
+            alertify.error('La cita no se ha aprobado');
+  });
+}
+
+function VerDetalles(){
+    alertify.alert('Grupo Gestión Inmobiliaria', 'La cita sera en tal oficina ', function(){
+        alertify.success('Ok'); window.location="consultar_cita_admin.html";})
+}
+

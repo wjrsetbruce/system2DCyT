@@ -76,69 +76,28 @@
         </ul>
     </aside><!-- Aside-->
 
-    <main class="pt-4">
-                
+    <!-- Contenido principal-->
+    <main class="pt-1">   
         <div class="container">
-            <h2 class="text-center mb-4">Administración de Inquilinos</h2>
-            <div class="row text-center panel justify-content-center align-middle">
-                <div class="col-lg-4 col-md-6 col-12 ">
-                    <div class="boton bg-success d-flex align-items-center justify-content-center">
-                        <a href="nuevo-inquilo.html" class="text-light">
-                            <i class="material-icons">add</i>
-                            <p>Nuevo Inquilino</p>
-                        </a>
-                    </div>
+            <h2 class="text-center mb-4">Editar datos</h2>
+            <div class="row">
+                <div class="col">
+                    <form class="formulario" novalidate>
+                        <div class="form-group">
+                            <label for="tel">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono"  placeholder="Teléfono" maxlength="11">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion">Dirección Fiscal</label>
+                            <textarea class="form-control" id="direccion" rows="3" placeholder="Dirección" maxlength="150"></textarea>
+                        </div>
+                        <input type="button" class="btn btn-success" onclick="Editar()" value="Editar"></button>
+                    </form>
                 </div>
             </div>
-
-            <h3 class="text-center mt-4">Lista de Inquilinos</h3>
-
-            <table class="table">
-                <caption>Listado Actualizado...</caption>
-                <thead>
-                    <tr>    
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                    <tbody>
-                        <tr>
-                                <th scope="row">1</th>
-                                <td>Lionel</td>
-                                <td>Messi</td>
-                                <td>
-                                    <a href="#" class="btn btn-danger" onclick="Borrar()">Borrar</a>
-                                    <a href="editar_inquilino.html" target="_blank" class="btn btn-success">Editar</a>
-                                    <a href="#" class="btn btn-primary" onclick="Ver()">Ver</a>
-                                </td>
-                        </tr>
-                        <tr>
-                                <th scope="row">2</th>
-                                <td>Cristiano</td>
-                                <td>Ronaldo</td>
-                                <td>
-                                    <a href="#" class="btn btn-danger" onclick="Borrar()">Borrar</a>
-                                    <a href="editar_inquilino.html" target="_blank" class="btn btn-success">Editar</a>
-                                    <a href="#" class="btn btn-primary" onclick="Ver()">Ver</a>
-                                </td>
-                        </tr>
-                        <tr>
-                                <th scope="row">3</th>
-                                <td>Emma</td>
-                                <td>Watson</td>
-                                <td>
-                                    <a href="#" class="btn btn-danger" onclick="Borrar()">Borrar</a>
-                                    <a href="editar_inquilino.html" target="_blank" class="btn btn-success" >Editar</a>
-                                    <a href="#" class="btn btn-primary" onclick="Ver()">Ver</a>
-                                </td>
-                        </tr>
-                    </tbody>
-                  </table>
         </div>
     </main>
-
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>
