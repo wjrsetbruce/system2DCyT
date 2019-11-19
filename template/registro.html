@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="../css/alertify.min.css">
     <link rel="stylesheet" href="../css/themes/default.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type = "image/x-icon" href="../img/favicon.ico" />
     <title>Registro</title>
 </head>
 <body>
     <div class="contenedor">
         <div class="formulario">
             <div class="registro">
-                <h3>Registrate</h3>
+                <h3>Regístrate</h3>
                 <form action="#">
-                    <input type="text" name="nombre" placeholder="Nombre" id="nombre">
-                    <input type="text" name="cedula" placeholder="Cedula" id="cedula">
-                    <input type="tel" name="telefono" placeholder="Telefono" id="telefono">
-                    <textarea name="direccion" placeholder="Dirección Fiscal" id="direccion"></textarea>
+                    <input type="text" name="nombre" placeholder="Nombre" id="nombre" minlength="3" maxlength="40" title="Sólo letras Tamaño mínimo: 3. - Tamaño máximo: 40."><!--añadí los mínimos y máximos y un título al posar el cursor-->
+                    <input type="text" name="cedula" placeholder="Cédula" id="cedula" minlength="6" maxlength="8" title="Sólo números Tamaño mínimo: 6. - Tamaño máximo: 8"><!--añadí los mínimos y máximos y un título al posar el cursor-->
+                    <input type="tel" name="telefono" placeholder="Teléfono" id="telefono" maxlength="11">
+                    <textarea name="direccion" placeholder="Dirección Fiscal" id="direccion" maxlength="150"></textarea>
+                    <label for="fecha">Fecha del Contrato</label><!--Lo añadí-->
                     <input type="date" name="fecha" placeholder="Fecha del contrato" id="fecha">
                     <input type="email" name="email" placeholder="Correo Electrónico" id="correo">
-                    <input type="password" name="password" placeholder="Contraseña" id="pass">
+                    <input type="password" name="password" placeholder="Contraseña" id="pass" maxlength="11" title="Tamaño máximo: 11 "><!--añadí máximo y un título al posar el cursor-->
                     <input type="button" class="alt-form" value="Registrar" onclick="Registro()">
                 </form>
             </div><!--Registro-->

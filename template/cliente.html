@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="../css/themes/default.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Panel de Administraciòn</title>
+    <link rel="shortcut icon" type = "image/x-icon" href="../img/favicon.ico" />
+    <title>Panel de Administración</title>
 </head>
 <body>
     <nav class="navbar bd-navbar navbar-expand-lg navbar-dark bg-primary">
-        <a href="cliente.html" class="navbar-brand">Admin Gestion Inmobiliaria</a>
+        <a href="cliente.html" class="navbar-brand">Grupo Gestión Inmobiliaria</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +24,7 @@
                     <div class="row">
                         <div class="col">
                             <form action="#" class="my-2 my-lg-0">
-                                <input class="form-control" type="search" placeholder="buscar">
+                                <input class="form-control" type="search" placeholder="Buscar">
                             </form>
                         </div><!--col-->
                         <div class="col-sm-2 text-right">
@@ -35,7 +36,7 @@
     </nav><!--Navegaciòn-->
 
     <aside class="bg-dark p-4">
-        <h3 class="text-light text-center">Navegaciòn</h3>
+        <h3 class="text-light text-center">Navegación</h3>
         <ul class="nav flex-column mt-5">
             <!--Modificar datos-->
             <li class="nav-item">
@@ -48,7 +49,7 @@
             <li class="nav-item">
                 <a href="consultar_servicio.html" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">storage</i>
-                        Consultar Sevicios
+                        Consultar sevicios
                 </a>
             </li>
             <!--Registrar cita-->
@@ -67,9 +68,9 @@
             </li>
             <!--Registrar Opinion-->
             <li class="nav-item">
-                <a href="#" class="nav-link text-ligth d-flex align-items-center blanco">
+                <a href="registrar_opinion.html" class="nav-link text-ligth d-flex align-items-center blanco">
                     <i class="material-icons mr-2">mood</i>
-                        Registrar opinion
+                        Registrar opinión
                 </a>
             </li>
         </ul>
@@ -78,18 +79,18 @@
     <!-- Contenido principal-->
     <main class="pt-1">   
         <div class="container">
-            <h2 class="text-center mb-4">Modificaciòn de datos</h2>
+            <h2 class="text-center mb-4">Modificación de datos</h2>
             <div class="row">
                 <div class="col">
                     <form class="formulario" novalidate>
                         <div class="form-group">
-                            <label for="tel">Telefono</label>
-                            <input type="tel" class="form-control" id="telefono"  placeholder="Telefono">
+                            <label for="tel">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono"  placeholder="Teléfono" maxlength="11">
                         </div>
 
                         <div class="form-group">
-                            <label for="direccion">Direcciòn fiscal</label>
-                            <textarea class="form-control" id="direccion" rows="3" placeholder="direccion"></textarea>
+                            <label for="direccion">Dirección Fiscal</label>
+                            <textarea class="form-control" id="direccion" rows="3" placeholder="Dirección" maxlength="150"></textarea>
                         </div>
                         
                         <div class="form-group">
@@ -99,7 +100,7 @@
 
                         <div class="form-group">
                             <label for="contraseña">Contraseña</label>
-                            <input type="password" class="form-control" id="password"  placeholder="Contraseña">
+                            <input type="password" class="form-control" id="password"  placeholder="Contraseña" maxlength="11">
                         </div>
                    
                         <input type="button" class="btn btn-success" onclick="modificarDatos()" value="Modificar"></button>

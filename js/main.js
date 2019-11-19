@@ -12,10 +12,10 @@ function Login(){
         window.location="template/cliente.html"; 
     }
     if(username === "" || username === "null" || password === "" || password === "null"){
-        alertify.error("Error, los campos se encuentran vacios");
+        alertify.error("Error, los campos se encuentran vacíos");
     }
     if(!validarEmail.test(username)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no válido");
         document.getElementById('correo').value = "";
     }
 
@@ -45,7 +45,7 @@ function Registro(){
     validarEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
     if(validarNombre.test(nombre)){
-        alertify.error('El nombre no puede contener numeros');
+        alertify.error('El nombre no puede contener números');
         document.getElementById('nombre').value = "";
         flag = false;
     }
@@ -55,7 +55,7 @@ function Registro(){
         flag = false;
     }
     if(validarCedula.test(cedula)){
-        alertify.error('La cedula no puede contener letras');
+        alertify.error('La cédula no puede contener letras');
         document.getElementById('cedula').value = "";
         flag = false;
     }
@@ -65,22 +65,22 @@ function Registro(){
         flag = false;
     }
     if(validarCaracteres.test(cedula)){
-        alertify.error('La cedula no puede contener caracteres especiales');
+        alertify.error('La cédula no puede contener caracteres especiales');
         document.getElementById('cedula').value = "";
         flag = false;
     }
     if(cedula === '18736475'){
-        alertify.error('Error, la cedula ya se encuentra registrada');
+        alertify.error('Error, Cliente ya registrado');
         document.getElementById('cedula').value = "";
         flag = false;
     }
     if(validarCedula.test(tlf) || validarCaracteres.test(tlf)){
-        alertify.error('El telefono no puede contener letras, ni caracteres especiales');
-        document.getElementById('tlf').value = "";
+        alertify.error('El teléfono no puede contener letras, ni caracteres especiales');
+        document.getElementById('telefono').value = "";
         flag = false;
     }
     if(!validarEmail.test(correo)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no válido");
         document.getElementById('correo').value = "";
         flag = false;
     }
@@ -88,12 +88,12 @@ function Registro(){
         || tlf === "null" || tlf === "" || direccion ==="" || direccion ==="null" ||
          correo === "null" || correo ===""|| pass === "null" || pass === ""){
             // Muestro el error
-        alertify.error("Error, algunos campos se encuentran vacio");
+        alertify.error("Error, algunos campos se encuentran vacíos");
         flag = false;
     }
 
     if(flag){
-        alertify.alert('Gestión Inmobiliaria', 'Registro Exitoso!', function(){ 
+        alertify.alert('Grupo Gestión Inmobiliaria', 'Registro Finalizado!', function(){ 
             alertify.success('Ok'); window.location="../index.html";})
     }
 
@@ -109,7 +109,7 @@ function modificarDatos(){
     validarTlf = /[A-Z]|\s|[a-z]/;
     validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
     if(!validarEmail.test(correo)){
-        alertify.error("Error, correo elèctronico no valido");
+        alertify.error("Error, correo eléctronico no válido");
         document.getElementById('email').value = "";
         flag = false;
     }
@@ -121,7 +121,7 @@ function modificarDatos(){
     }
 
     if(validarTlf.test(tlf) || validarCaracteres.test(tlf)){
-        alertify.error('El telefono no puede contener letras, ni caracteres especiales');
+        alertify.error('El teléfono no puede contener letras, ni caracteres especiales');
         document.getElementById('telefono').value = "";
         flag = false;
     }
@@ -129,30 +129,30 @@ function modificarDatos(){
     if(tlf === "" || tlf === "null" || direccion === "" || direccion === "null" ||
          correo === "null" || correo ===""|| password === "null" || password === ""){
             // Muestro el error
-         alertify.error("Error, algunos campos se encuentran vacio");
+         alertify.error("Error, algunos campos se encuentran vacíos");
          flag = false;
     }
 
     if(flag){
-        alertify.alert('Gestión Inmobiliaria', 'Modificaciòn Exitosa!', function(){
+        alertify.alert('Grupo Gestión Inmobiliaria', 'Modificación Exitosa!', function(){
             alertify.success('Ok'); window.location="cliente.html";})
 
     }
 }
 
 function Locales(){
-    alertify.alert('Gestión Inmobiliaria', 'Informaciòn del Loca y la Oficina', function(){
+    alertify.alert('Grupo Gestión Inmobiliaria', 'Información del Local y la Oficina', function(){
         alertify.success('Ok'); window.location="consultar_servicio.html";})
 
 }
 
 function RegistroCita(){
-    alertify.alert('Gestión Inmobiliaria', 'El registro ha sido exitoso, tiene su cita a las 3PM', function(){
+    alertify.alert('Grupo Gestión Inmobiliaria', 'Registro de Solicitud Finalizada, tiene su cita a las 3PM', function(){
         alertify.success('Ok'); window.location="registrar_cita.html";})
 }
 
 function ConsultarCita(){
-    alertify.alert('Gestión Inmobiliaria', 'La hora de su cita es a las 3pm', function(){
+    alertify.alert('Grupo Gestión Inmobiliaria', 'La hora de su cita es a las 3pm', function(){
         alertify.success('Ok'); window.location="consultar_cita.html";})
 }
 
@@ -161,13 +161,13 @@ function RegistrarOpinion(){
     var opinion = document.getElementById("opinion").value;
     var flag = true;
     if(validarCaracteres.test(opinion) || opinion === "null" || opinion ===""){
-        alertify.error('No puede dejar vacio el campo de opinión, ni colocar caracteres especiales');
+        alertify.error('No puede dejar vacío el campo de opinión, ni colocar caracteres especiales');
         document.getElementById('opinion').value = "";
         flag = false;
     }
     if(flag){
-        alertify.alert('Gestión Inmobiliaria', 'Muchas gracias por su opinion', function(){
-            alertify.success('Ok'); window.location="registrar_cita.html";})
+        alertify.alert('Grupo Gestión Inmobiliaria', '¡ Gracias por su opinión !', function(){
+            alertify.success('Opinion guardada con exito'); document.getElementById('opinion').value = "";})
     }
 
 }

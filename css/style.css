@@ -12,7 +12,7 @@ html{
 *{
 	margin:0;
     padding:0;
-    text-decoration: none;
+    text-decoration: none;/*Quita los subrayados por defectos a los links*/
 }
 
 img{
@@ -27,16 +27,16 @@ img{
 }
 
 body{
-    font-size:1.8rem;
+    font-size:1.8rem;/*Tamaño de la fuente*/
 	line-height: 2;
 	background: linear-gradient(90deg,#00d7a2,#043670);
 	padding: 15px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;/*Tipografía a usar*/
 }
 
-.logo-header{
+.logo-header{/*Para centrar imágenes es necesario esto*/
 	width: 130px;
-	display: block;
+	display: block;/*Por defecto las imágenes son display:inline; hay que cambiarlo*/
 	margin: 0 auto;
 }
 
@@ -44,7 +44,7 @@ body{
 	text-align:center;
 	font-weight: 700;
 	margin-top:15px;
-	color:#7a7a7a;
+	color:#7a7a7a;/*color de la fuente*/
 }
 
 /* Estilos al formulario */
@@ -54,7 +54,7 @@ body{
 	margin: 20px auto; /*para centrarlo */
 	padding: 20px;
 	margin-top: 90px;/*para bajarlo un poco */
-	border-radius: 11px;
+	border-radius: 11px;/*Redondear bordes*/
 }
 
 .formulario input,
@@ -66,8 +66,8 @@ body{
 	border:0px;
 	outline: 0px;
 	border-bottom: 1px solid rgba(0,0,0,0.18);
-	color: #043670;
-	font-size: 15px;
+	color: #043670;/*color de la fuente*/
+	font-size: 15px;/*Tamaño de la fuente*/
 }
 
 .formulario h3,
@@ -99,16 +99,21 @@ body{
 	width:100%;
 	height: 50px;
 	margin-top: 40px;
-	color: white;
+	color: white;/*color de la fuente*/
 	border:0px;
 	background: linear-gradient(90deg,#00d7a2,#043670);
 	font-weight: 700;
-	cursor: pointer;
-	font-size:18px;
+	cursor: pointer;/*Modifica el cursor a mostrar*/
+	font-size:18px;/*Tamaño de la fuente*/
 }
 
-.formulario input[type="button"]:hover{
+.formulario input[type="button"]:hover{/*Cambia de color al pasar por el botón*/
 	background: linear-gradient(90deg,#043670,#00d7a2);
+}
+
+.formulario input[type="button"]:active{/*Al hacer clic*/
+	background: #ed8404;
+	transform: scale(1.06); /*Aumenta el tamaño del input al dar clic*/
 }
 
 .formulario textarea{
@@ -123,15 +128,18 @@ body{
 	display: block;
 	text-align: center;
 	margin-top: 20px;
-	color:#7a7a7a;
-	font-weight: 400;
+	color:#7a7a7a;/*color de la fuente*/
+	font-weight: 400;/*Quitar grosor ó quitar la negrita de la fuente*/
 }
 
 .text-footer a{
-	color: #043670;
+	color: #043670;/*color de la fuente*/
 	font-weight: 700;
 }
 /* listo el formulario , aunque no es responsive */
 
-
+.formulario h3,
+label{
+	color:#7a7a7a
+}
 
