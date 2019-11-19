@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/apps.css">
+    <link rel="stylesheet" href="../css/alertify.min.css">
+    <link rel="stylesheet" href="../css/themes/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type = "image/x-icon" href="../img/favicon.ico" />
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <nav class="navbar bd-navbar navbar-expand-lg navbar-dark bg-primary">
+        <a href="cliente.html" class="navbar-brand">Grupo Gestión Inmobiliaria</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="#navegacion">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <form action="#" class="my-2 my-lg-0">
+                                <input class="form-control" type="search" placeholder="Buscar">
+                            </form>
+                        </div><!--col-->
+                        <div class="col-sm-2 text-right">
+                            <a href="../index.html" class="btn btn-success px-5 text-light">Salir</a>
+                        </div><!--Otro Col-->
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--Collapse-->
+    </nav><!--Navegaciòn-->
+
+    <aside class="bg-dark p-4">
+        <h3 class="text-light text-center">Navegación</h3>
+        <ul class="nav flex-column mt-5">
+            <!--Consultar inquilino-->
+            <li class="nav-item">
+                <a href="admin.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                    <i class="material-icons mr-2">account_box</i>
+                    Consultar Inquilino
+                </a>
+            </li>
+            <!--Consultar cita-->
+            <li class="nav-item">
+                <a href="consultar_cita_admin.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                    <i class="material-icons mr-2">storage</i>
+                        Consultar cita
+                </a>
+            </li>
+            <!--Registrar servicio-->
+            <li class="nav-item">
+                <a href="registrar_servicio.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                    <i class="material-icons mr-2">save</i>
+                        Registrar servicio
+                </a>
+            </li>
+            <!--Consultar servicio-->
+            <li class="nav-item">
+                <a href="consultar_servicio_admin.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                    <i class="material-icons mr-2">pageview</i>
+                        Consultar servicio
+                </a>
+            </li>
+            <!--Consultar Opinion-->
+            <li class="nav-item">
+                <a href="consultar_opinion.html" class="nav-link text-ligth d-flex align-items-center blanco">
+                    <i class="material-icons mr-2">mood</i>
+                        Consultar Reporte de Opiniones
+                </a>
+            </li>
+        </ul>
+    </aside><!-- Aside-->
+
+    <main class="pt-4">    
+        <div class="container">
+            <h3 class="text-center mt-4">Opiniones</h3>
+                <table class="table">
+                    <caption>Listado Actualizado...</caption>
+                    <thead>
+                        <tr>    
+                            <th scope="col">Número</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Paola</td>
+                                <td>Rodriguez</td>
+                                <td>
+                                    <a href="#" onclick="ReporteOpinion()"class="btn btn-success">Ver Reporte de Opinion</a>
+                                </td>
+                            </tr>
+                            <tr>
+                               <th scope="row">2</th>
+                                <td>Maria</td>
+                                <td>Cardenas</td>
+                                <td>
+                                     <a href="#" onclick="ReporteOpinion()"class="btn btn-success">Ver Reporte de Opinion</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Emma</td>
+                                <td>Watson</td>
+                                <td>
+                                   <a href="#" onclick="ReporteOpinion()"class="btn btn-success">Ver Reporte de Opinion</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                      </table>
+            </div>
+        </main>
+
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/alertify.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>
