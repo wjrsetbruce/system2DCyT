@@ -76,53 +76,36 @@
         </ul>
     </aside><!-- Aside-->
 
-    <main class="pt-4">
-                
+    <!-- Contenido principal-->
+    <main class="pt-1">   
         <div class="container">
-            <h3 class="text-center mt-4">Listado de Servicios</h3>
+            <h2 class="text-center mb-4">Actualizar Servicio</h2>
+            <div class="row">
+                <div class="col">
+                    <form class="formulario" novalidate>
+                        <div class="form-group">
+                            <label for="codigo">Código</label>
+                            <input type="text" class="form-control" id="codigo"  placeholder="Código del servicio" >
+                        </div>
 
-            <table class="table">
-                <caption>Listado Actualizado...</caption>
-                <thead>
-                    <tr>    
-                            <th scope="col">Codigo</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">V01453</th>
-                            <td>Servicio 1</td>
-                            <td>Oficina</td>
-                            <td>
-                                <a href="#" class="btn btn-danger" onclick="BorrarServicio()">Borrar</a>
-                                <a href="actualizar_servicio.html" class="btn btn-success">Actualizar servicio</a>
-                            </td>
-                        </tr>
-                        <tr>
-                           <th scope="row">V0478554</th>
-                            <td>Servicio 2</td>
-                            <td>Local</td>
-                            <td>
-                                <a href="#" class="btn btn-danger" onclick="BorrarServicio()">Borrar</a>
-                                <a href="actualizar_servicio.html" class="btn btn-success">Actualizar servicio</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">V0457894</th>
-                            <td>Servicio 3</td>
-                            <td>Local</td>
-                            <td>
-                                <a href="#" class="btn btn-danger" onclick="BorrarServicio()">Borrar</a>
-                               <a href="actualizar_servicio.html" class="btn btn-success">Actualizar Servicio</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                  </table>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripción del Servicio" maxlength="150"></textarea>
+                        </div>
+
+                        <select id="inputState" class="form-control">
+                          <option selected>Seleccionar</option>
+                          <option>Local</option>
+                          <option>Oficina</option>
+                        </select>
+                        <br>
+                        <input type="button" class="btn btn-success" onclick="actualizarServicio()" value="Registrar Servicio"></button>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
+
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>

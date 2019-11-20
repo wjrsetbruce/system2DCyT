@@ -234,4 +234,67 @@ function ReporteOpinion(){
         alertify.success('Ok'); window.location="consultar_opinion.html";})
 }
 
+function registrarServicio(){
+    var codigo = document.getElementById("codigo").value;
+    var descripcion = document.getElementById("descripcion").value;
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
+    var flag = true;
+    if(codigo === "null" || codigo === "" || descripcion ==="null" ||
+        descripcion === ""){
+            alertify.error('Los campos no pueden estar vacios');
+            document.getElementById("codigo").value = "";
+            document.getElementById("descripcion").value = "";
+            flag = false;
+        }
 
+    if(codigo === "null" || codigo === "" || descripcion ==="null" ||
+    descripcion === ""){
+        alertify.error('Los campos no pueden estar vacios');
+        document.getElementById("codigo").value = "";
+        document.getElementById("descripcion").value = "";
+        flag = false;
+    }
+
+    if(flag){
+        alertify.success('El servicio se ha registrado exitosamente');
+        document.getElementById("codigo").value = "";
+        document.getElementById("descripcion").value = "";
+    }
+
+}
+
+function BorrarServicio(){
+    alertify.confirm("¿Esta seguro que desea Borrar el servicio.?",function(){
+        alertify.success('Servicio eliminado exitosamente');},function(){
+            alertify.error('El servicio no se ha eliminado');
+  });
+}
+
+function actualizarServicio(){
+    var codigo = document.getElementById("codigo").value;
+    var descripcion = document.getElementById("descripcion").value;
+    validarCaracteres = /[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
+    var flag = true;
+    if(codigo === "null" || codigo === "" || descripcion ==="null" ||
+        descripcion === ""){
+            alertify.error('Los campos no pueden estar vacios');
+            document.getElementById("codigo").value = "";
+            document.getElementById("descripcion").value = "";
+            flag = false;
+        }
+
+    if(codigo === "null" || codigo === "" || descripcion ==="null" ||
+    descripcion === ""){
+        alertify.error('Los campos no pueden estar vacios');
+        document.getElementById("codigo").value = "";
+        document.getElementById("descripcion").value = "";
+        flag = false;
+    }
+
+    if(flag){
+        alertify.success('El servicio se ha actualizado exitosamente');
+        document.getElementById("codigo").value = "";
+        document.getElementById("descripcion").value = "";
+    }
+
+}

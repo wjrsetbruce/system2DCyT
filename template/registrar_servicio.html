@@ -76,6 +76,36 @@
         </ul>
     </aside><!-- Aside-->
 
+    <!-- Contenido principal-->
+    <main class="pt-1">   
+        <div class="container">
+            <h2 class="text-center mb-4">Registrar Servicio</h2>
+            <div class="row">
+                <div class="col">
+                    <form class="formulario" novalidate>
+                        <div class="form-group">
+                            <label for="codigo">Código</label>
+                            <input type="text" class="form-control" id="codigo"  placeholder="Código del servicio" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripción del Servicio" maxlength="150"></textarea>
+                        </div>
+
+                        <select id="inputState" class="form-control">
+                          <option selected>Seleccionar</option>
+                          <option>Local</option>
+                          <option>Oficina</option>
+                        </select>
+                        <br>
+                        <input type="button" class="btn btn-success" onclick="registrarServicio()" value="Registrar Servicio"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/alertify.min.js"></script>
