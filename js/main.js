@@ -64,6 +64,11 @@ function Registro(){
         document.getElementById('direccion').value = "";
         flag = false;
     }
+    if(validarCaracteres.test(cedula)){
+        alertify.error('La cédula no puede contener caracteres especiales');
+        document.getElementById('cedula').value = "";
+        flag = false;
+    }
     if(cedula === '18736475'){
         alertify.error('Error, Cliente ya registrado');
         document.getElementById('cedula').value = "";
@@ -87,9 +92,10 @@ function Registro(){
         flag = false;
     }
 
-    if(flag){
-        alertify.alert('Grupo Gestión Inmobiliaria', 'Registro Finalizado!', function(){ 
-            alertify.success('Ok'); window.location="../index.html";})
+    if(flag){/*v.0.5.Change alert by confirm and alertify.success (no show) by an alert*/
+        alertify.confirm('¿Seguro que desea guardar?',
+            function(){alert('Registro Finalizado'); window.location="../index.html";},
+            function(){alertify.error('No se ha registrado')});
     }
 
 }
@@ -128,9 +134,10 @@ function modificarDatos(){
          flag = false;
     }
 
-    if(flag){
-        alertify.alert('Grupo Gestión Inmobiliaria', 'Modificación Exitosa!', function(){
-            alertify.success('Ok'); window.location="cliente.html";})
+    if(flag){/*v.0.5.Change alert by confirm and alertify.success (no show) by an alert*/
+        alertify.confirm('¿Confirmar Modificación?',
+            function(){alert('¡ Modificación Exitosa !'); window.location="cliente.html";},
+            function(){alertify.error('Canceló Modificación')});
 
     }
 }
@@ -141,14 +148,16 @@ function Locales(){
 
 }
 
-function RegistroCita(){
-    alertify.alert('Grupo Gestión Inmobiliaria', 'Registro de Solicitud Finalizada, tiene su cita a las 3PM', function(){
-        alertify.success('Ok'); window.location="registrar_cita.html";})
+function RegistroCita(){/*v.0.5.Change alert by confirm and alertify.success (no show) by an alert*/
+    alertify.confirm('¿Seguro que desea guardar?',
+        function(){alert('Registro de Solicitud Finalizada, tiene su cita a las 3PM'); window.location="registrar_cita.html";},
+        function(){alertify.error('No guardó cita')});
 }
 
 function ConsultarCita(){
-    alertify.alert('Grupo Gestión Inmobiliaria', 'La hora de su cita es a las 3pm', function(){
-        alertify.success('Ok'); window.location="consultar_cita.html";})
+	alertify.confirm('¿Desea actualizar cita?',
+        function(){alert('Registrar nueva cita'); window.location="registrar_cita.html";},
+        function(){alertify.error('La hora de su cita es a las 3pm')});
 }
 
 function RegistrarOpinion(){
@@ -161,8 +170,9 @@ function RegistrarOpinion(){
         flag = false;
     }
     if(flag){
-        alertify.alert('Grupo Gestión Inmobiliaria', '¡ Gracias por su opinión !', function(){
-            alertify.success('Opinion guardada con exito'); document.getElementById('opinion').value = "";})
+        alertify.confirm('¿Confirmar su opinión?',/*v.0.5 Change alert by confirm and alertify.success by an alert*/
+            function(){alert('¡ Gracias por su opinión !',); window.location="registrar_opinion.html";},
+            function(){alertify.error('Canceló su opinión')});
     }
 
 }
@@ -223,3 +233,5 @@ function ReporteOpinion(){
     alertify.alert('Grupo Gestión Inmobiliaria - Reporte', 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.', function(){
         alertify.success('Ok'); window.location="consultar_opinion.html";})
 }
+
+
