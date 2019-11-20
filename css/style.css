@@ -114,7 +114,7 @@ body{
 .formulario input[type="button"]:active{/*Al hacer clic*/
 	background: #ed8404;
 	transform: scale(1.06); /*Aumenta el tamaño del input al dar clic*/
-}/*Esto lo añadí*/
+}
 
 .formulario textarea{
 	min-height: 120px;
@@ -138,14 +138,8 @@ body{
 }
 /* listo el formulario , aunque no es responsive */
 
-/*Pruebas*/
-.text-footer a:hover{
-	background: linear-gradient(90deg,#00d7a2,#043670);
+.formulario h3,
+label{
+	color:#7a7a7a
 }
-
-.text-footer a:active{
-	background: #ed8404;
-	transform: scale(1.6);
-}
-
 
