@@ -1,4 +1,4 @@
-# Prototype for System
+# Prototype for System2
 
 ## Authors
 *. [Daniel Leota](https://github.com/DrNykterstein)
